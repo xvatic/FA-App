@@ -10,7 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text("Food App")
+                .font(.title)
+                .lineLimit(nil)
+            
+            Text("Designed by D.I.C.K Team")
+                .font(.subheadline)
+            Image("logo")
+                .padding(.all, -40.0)
+            .clipShape(Circle())
+            
+            
+        }
     }
 }
 

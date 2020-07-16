@@ -1,0 +1,19 @@
+[
+    {
+        "id":10,
+        "name":"Cappuccino",
+        "imageName":"https://media-cdn.tripadvisor.com/media/photo-s/10/c4/18/a3/cappiccino.jpg",
+        "type":"basic",
+        "description":"Outside of Italy, cappuccino is a coffee drink that today is typically composed of double espresso and hot milk, with the surface topped with foamed milk. Cappuccinos are most often prepared with an espresso macchine. The double espreso os poured into the bottomof the cip, followed by a similar amount of hot milk, which is prepared by heating and texturing the milk using the espresso machine steam wand. The top third of th drink consistes of milk foam; this foam can be decorated with artisticc drawings made with the same milk, called latte art.",
+        "category":"drink"
+    },
+    {
+        "id":11,
+        "name":"Draniki",
+        "imageName":"needed URL =(",
+        "type":"basic",
+        "description":"Traditional Belarusian draniki is made of potatoes, onions, salt and oil. These ingredients are enough if you make draniki using delicious Belarusian potatoes rich in starch. In traditional Belarusian recipes flour and eggs are not added to thicken the substance. If grated potatoes appear too liquid, Belarusian housewives drain excess potato juice and add some starch which sank to the bottom of the bowl together with potato juice. However, you can use imagination and change the traditional draniki recipe by adding eggs, flour, spices.",
+        "category":"food"
+    }
+    
+]

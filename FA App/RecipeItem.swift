@@ -13,10 +13,11 @@ import Foundation
 
 struct RecipeItem: View {
     var recipe:Recipe
-    let url = URL(string: "https://image.shutterstock.com/image-photo/beautiful-pink-flower-anemones-fresh-260nw-1028135845.jpg")!
+    let url:String
     var body: some View {
+        
         AsyncImage(
-            url: url,
+            url: URL(string: url)!,
             placeholder: Text("Loading ...")
         ).aspectRatio(contentMode: .fit)
     }
@@ -24,6 +25,6 @@ struct RecipeItem: View {
 
 struct RecipeItem_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeItem(recipe: recipeData[0])
+        RecipeItem(recipe: recipeData[0], url: recipeData[0].imageName)
     }
 }

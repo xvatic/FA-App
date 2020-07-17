@@ -12,7 +12,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-   let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
+    let url:String
     
     var body: some View {
         VStack {
@@ -24,7 +24,7 @@ struct ContentView: View {
                 .font(.subheadline)
             
             AsyncImage(
-                    url: url,
+                    url: URL(string: url)!,
                     placeholder: Text("Loading ...")
                 ).aspectRatio(contentMode: .fit)
             
@@ -37,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(url: recipeData[0].imageName)
     }
 }

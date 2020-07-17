@@ -22,6 +22,7 @@
 		D0CFAF2F24C0F5CD002EE46A /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAF2E24C0F5CD002EE46A /* DataDecoder.swift */; };
 		D0CFAF3124C1015B002EE46A /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = D0CFAF3024C1015B002EE46A /* recipes.json */; };
 		D0CFAF3324C10D70002EE46A /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAF3224C10D70002EE46A /* RecipeRow.swift */; };
+		D0CFAF3724C11A26002EE46A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAF3624C11A26002EE46A /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D0CFAF2E24C0F5CD002EE46A /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
 		D0CFAF3024C1015B002EE46A /* recipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		D0CFAF3224C10D70002EE46A /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		D0CFAF3624C11A26002EE46A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				D0CFAF2C24C0F080002EE46A /* RecipeItem.swift */,
 				D0CFAF2E24C0F5CD002EE46A /* DataDecoder.swift */,
 				D0CFAF3224C10D70002EE46A /* RecipeRow.swift */,
+				D0CFAF3624C11A26002EE46A /* Loader.swift */,
 			);
 			path = "FA App";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				D0CFAF2724BBB3B3002EE46A /* DataModel.swift in Sources */,
 				D0CFAF3324C10D70002EE46A /* RecipeRow.swift in Sources */,
 				D0CFAF2924BBB45E002EE46A /* DataInteraction.swift in Sources */,
+				D0CFAF3724C11A26002EE46A /* Loader.swift in Sources */,
 				D0CFAF2B24C0EECB002EE46A /* Recipe.swift in Sources */,
 				D0CFAF2F24C0F5CD002EE46A /* DataDecoder.swift in Sources */,
 				D0CFAEF624BBB0F7002EE46A /* SceneDelegate.swift in Sources */,

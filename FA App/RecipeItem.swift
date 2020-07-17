@@ -7,11 +7,18 @@
 //
 
 import SwiftUI
+import Combine
+import Foundation
+
 
 struct RecipeItem: View {
     var recipe:Recipe
+    let url = URL(string: "https://image.shutterstock.com/image-photo/beautiful-pink-flower-anemones-fresh-260nw-1028135845.jpg")!
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(
+            url: url,
+            placeholder: Text("Loading ...")
+        ).aspectRatio(contentMode: .fit)
     }
 }
 

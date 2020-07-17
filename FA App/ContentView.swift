@@ -8,7 +8,12 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+   let url = URL(string: "https://image.tmdb.org/t/p/original/pThyQovXQrw2m0s9x82twj48Jq4.jpg")!
+    
     var body: some View {
         VStack {
             Text("Food App")
@@ -17,12 +22,16 @@ struct ContentView: View {
             
             Text("Designed by D.I.C.K Team")
                 .font(.subheadline)
-            Image("logo")
-                .padding(.all, -40.0)
-            .clipShape(Circle())
+            
+            AsyncImage(
+                    url: url,
+                    placeholder: Text("Loading ...")
+                ).aspectRatio(contentMode: .fit)
+            
             
             
         }
+        
     }
 }
 

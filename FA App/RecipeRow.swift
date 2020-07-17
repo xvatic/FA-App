@@ -18,11 +18,18 @@ struct RecipeRow: View {
             ScrollView (.horizontal, showsIndicators: false){
                 HStack(alignment: .top) {
                     ForEach(self.recipes, id: \.name) { recipe in
-                        RecipeItem(
-                            recipe: recipe,
-                            url: recipe.imageName)
-                        .frame(width:300)
-                        .padding(.trailing, 30)
+                        
+                        NavigationLink (destination: ArticleView(recipe: recipe, url: recipe.imageName)) {
+                            
+                            RecipeItem(
+                                recipe: recipe,
+                                url: recipe.imageName)
+                            .frame(width:300)
+                            .padding(.trailing, 30)
+                            
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
                         
                     }
                 }

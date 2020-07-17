@@ -15,6 +15,7 @@ struct Recipe: Hashable, Codable, Identifiable {
     var type:PrescriptionType
     var category:Category
     var description:String
+    var likes: Int
     
     enum PrescriptionType:String, CaseIterable, Codable, Hashable {
         case basic = "basic"

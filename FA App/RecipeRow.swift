@@ -9,13 +9,31 @@
 import SwiftUI
 
 struct RecipeRow: View {
+    var prescriptiontype:String
+    var recipes:[Recipe]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(self.prescriptiontype)
+                .font(.title)
+            ScrollView (.horizontal, showsIndicators: false){
+                HStack(alignment: .top) {
+                    ForEach(self.recipes, id: \.name) { recipe in
+                        RecipeItem(
+                            recipe: recipe,
+                            url: recipe.imageName)
+                        .frame(width:300)
+                        .padding(.trailing, 30)
+                        
+                    }
+                }
+                
+            }
+        }
     }
 }
 
 struct RecipeRow_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeRow()
+        RecipeRow(prescriptiontype: "TOP-RATED-BASIC", recipes: recipeData)
     }
 }

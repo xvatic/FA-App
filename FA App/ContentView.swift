@@ -13,24 +13,25 @@ import SwiftUI
 struct ContentView: View {
     
     let url:String
+    var categories:[String:[Recipe]] {
+        .init(
+            grouping: recipeData,
+            by: {$0.category.rawValue}
+        )
+    }
+    
     
     var body: some View {
-        VStack {
-            Text("Food App")
-                .font(.title)
-                .lineLimit(nil)
-            
-            Text("Designed by D.I.C.K Team")
-                .font(.subheadline)
-            
-            AsyncImage(
-                    url: URL(string: url)!,
-                    placeholder: Text("Loading ...")
-                ).aspectRatio(contentMode: .fit)
-            
-            
-            
+        NavigationView{
+            List (categories.keys.sorted(), id: \String.self) {key in
+                RecipeRow(prescriptiontype: "\(key)".uppercased(), recipes: self.categories[key]!)
+                    .padding(.top)
+                    .padding(.bottom)
+                
+            }
+        .navigationBarTitle(Text("TOP RATED"))
         }
+      
         
     }
 }

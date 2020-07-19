@@ -37,7 +37,7 @@ struct RecipeItem: View {
                 .lineLimit(2)
                 .frame(height:40)
                 HStack (alignment: .lastTextBaseline){
-                    Image("like2")
+                    Image(systemName: "heart")
                     .resizable()
                         .frame(width: 20, height: 20)
                     Text("\(recipe.likes)")

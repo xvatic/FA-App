@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D09BF52F24C206D8009195D3 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF52E24C206D8009195D3 /* ArticleView.swift */; };
+		D09BF53124C4BEDB009195D3 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF53024C4BEDB009195D3 /* NavigationBar.swift */; };
 		D0CFAEF424BBB0F7002EE46A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAEF324BBB0F7002EE46A /* AppDelegate.swift */; };
 		D0CFAEF624BBB0F7002EE46A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAEF524BBB0F7002EE46A /* SceneDelegate.swift */; };
 		D0CFAEF824BBB0F7002EE46A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAEF724BBB0F7002EE46A /* ContentView.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		D09BF52E24C206D8009195D3 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		D09BF53024C4BEDB009195D3 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D0CFAEF024BBB0F7002EE46A /* FA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0CFAEF324BBB0F7002EE46A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0CFAEF524BBB0F7002EE46A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				D0CFAF2C24C0F080002EE46A /* RecipeItem.swift */,
 				D0CFAF3224C10D70002EE46A /* RecipeRow.swift */,
 				D09BF52E24C206D8009195D3 /* ArticleView.swift */,
+				D09BF53024C4BEDB009195D3 /* NavigationBar.swift */,
 			);
 			path = "FA App";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				D0CFAF2724BBB3B3002EE46A /* DataModel.swift in Sources */,
 				D0CFAF3324C10D70002EE46A /* RecipeRow.swift in Sources */,
 				D0CFAF2924BBB45E002EE46A /* DataInteraction.swift in Sources */,
+				D09BF53124C4BEDB009195D3 /* NavigationBar.swift in Sources */,
 				D0CFAF3724C11A26002EE46A /* Loader.swift in Sources */,
 				D0CFAF3A24C1B9B7002EE46A /* AsyncImage.swift in Sources */,
 				D0CFAF2B24C0EECB002EE46A /* Recipe.swift in Sources */,

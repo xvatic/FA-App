@@ -22,15 +22,21 @@ struct ContentView: View {
     
     
     var body: some View {
-        NavigationView{
-            List (categories.keys.sorted(), id: \String.self) {key in
-                RecipeRow(prescriptiontype: "\(key)".uppercased(), recipes: self.categories[key]!)
-                    .padding(.top)
-                    .padding(.bottom)
-                
+        
+        VStack {
+            NavigationView{
+                List (categories.keys.sorted(), id: \String.self) {key in
+                    RecipeRow(prescriptiontype: "\(key)".uppercased(), recipes: self.categories[key]!)
+                        .padding(.top)
+                        .padding(.bottom)
+                    
+                }
+            .navigationBarTitle(Text("TOP RATED"))
             }
-        .navigationBarTitle(Text("TOP RATED"))
+            Spacer()
+            NavigationBar()
         }
+        
       
         
     }

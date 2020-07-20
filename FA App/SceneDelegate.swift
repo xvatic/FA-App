@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
+        loadTopRatedArticles()
+        sleep(4)
         let contentView = ContentView(url: recipeData[0].imageName)
 
         // Use a UIHostingController as window root view controller.

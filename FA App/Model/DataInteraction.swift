@@ -16,7 +16,7 @@ var urlToData: URL {
 }
 
 func loadTopRatedArticles() {
-    let url = URL(string: "http://9628a5b04f59.ngrok.io/weatherforecast")
+    let url = URL(string: "http://localhost:5000/Recipes?count=5")
     let session = URLSession(configuration: .default)
     let dowloadTask = session.downloadTask(with: url!) { (urlFile, responce, error) in
         if urlFile != nil {
@@ -26,7 +26,6 @@ func loadTopRatedArticles() {
             try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
             print(urlToData)
             
-            parseTopRatedArticles()
             
             print(articles.count)
         }

@@ -8,17 +8,15 @@
 
 import Foundation
 
-let recipeData:[Recipe] = load("recipes.json")
+let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"/data.json"
+let recipeData:[Recipe] = load(path)
+
 
 func load<T:Decodable>(_ filename:String, as type:T.Type = T.self)->T {
     let data:Data
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        else{
-            fatalError("Could not find \(filename) in main bundle.")
-            
-    }
+    
     do {
-        data = try Data(contentsOf: file)
+        data = try Data(contentsOf: urlToData)
     } catch {
         fatalError("Could not load \(filename) in main bundle.\n\(error)")
     }

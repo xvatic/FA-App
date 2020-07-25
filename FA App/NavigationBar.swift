@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NavigationBar: View {
     
-    @State var index = 0
+    @Binding var index : Int
     var body: some View {
         HStack {
             Button (action: {
@@ -125,11 +125,8 @@ struct NavigationBar: View {
         .padding(.vertical)
         .padding(.horizontal, 25)
         .background(Color.white)
+        .animation(.spring())
     }
 }
 
-struct NavigationBar_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationBar()
-    }
-}
+

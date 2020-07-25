@@ -20,22 +20,42 @@ struct ContentView: View {
         )
     }
     
+    @State var index = 0
     
     var body: some View {
         
         VStack {
-            NavigationView{
-                List (categories.keys.sorted(), id: \String.self) {key in
-                    RecipeRow(prescriptiontype: "\(key)".uppercased(), recipes: self.categories[key]!)
-                        .padding(.top)
-                        .padding(.bottom)
+            ZStack {
+                if self.index == 0{
+                    NavigationView{
+                        List (categories.keys.sorted(), id: \String.self) {key in
+                            RecipeRow(prescriptiontype: "\(key)".uppercased(), recipes: self.categories[key]!)
+                                .padding(.top)
+                                .padding(.bottom)
+                            
+                        }
+                    .navigationBarTitle(Text("TOP RATED"))
+                    }
                     
                 }
-            .navigationBarTitle(Text("TOP RATED"))
+                else if self.index == 1{
+                    Color.black
+                }
+                else if self.index == 2{
+                    Color.yellow
+                }
+                else if self.index == 3{
+                    Color.blue
+                }
+                else{
+                    Color.orange
+                }
+                
+                
             }
             Spacer()
-            NavigationBar()
-        }
+            NavigationBar(index: self.$index)
+        }.edgesIgnoringSafeArea(.top)
         
       
         

@@ -14,27 +14,36 @@ struct SearchPanel: View {
     var body: some View {
         VStack (spacing:0){
             HStack {
-                Text("Search").fontWeight(.bold).font(.title).foregroundColor(.white)
+                if !self.show{
+                    Text("Search").fontWeight(.bold).font(.title).foregroundColor(.white)
+                }
+                
                 Spacer(minLength: 0)
                 HStack {
                     if self.show{
                         Image(systemName:"magnifyingglass")
                         TextField("Search by", text: self.$txt)
                         Button(action: {
-                            self.show.toggle()
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                            
                         }) {
                             Image(systemName: "xmark").foregroundColor(.black)
                         }
                     }
                     else {
                         Button(action:{
-                            self.show.toggle()
+                            withAnimation{
+                                self.show.toggle()
+                            }
                         }) {
                             Image(systemName: "magnifyingglass").foregroundColor(.black).padding(20)
                         }
                         
                     }
-                }.background(Color.white)
+                }.padding(self.show ? 10: 0)
+                .background(Color.white)
                 .cornerRadius(20)
                 
             }

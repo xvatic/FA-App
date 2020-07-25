@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D08DD59624CC9D4C00CEE694 /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */; };
 		D09BF52F24C206D8009195D3 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF52E24C206D8009195D3 /* ArticleView.swift */; };
 		D09BF53124C4BEDB009195D3 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF53024C4BEDB009195D3 /* NavigationBar.swift */; };
 		D0CFAEF424BBB0F7002EE46A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAEF324BBB0F7002EE46A /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
 		D09BF52E24C206D8009195D3 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		D09BF53024C4BEDB009195D3 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D0CFAEF024BBB0F7002EE46A /* FA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				D0CFAF3224C10D70002EE46A /* RecipeRow.swift */,
 				D09BF52E24C206D8009195D3 /* ArticleView.swift */,
 				D09BF53024C4BEDB009195D3 /* NavigationBar.swift */,
+				D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */,
 			);
 			path = "FA App";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08DD59624CC9D4C00CEE694 /* SearchPanel.swift in Sources */,
 				D0CFAEF424BBB0F7002EE46A /* AppDelegate.swift in Sources */,
 				D0CFAF2724BBB3B3002EE46A /* DataModel.swift in Sources */,
 				D0CFAF3324C10D70002EE46A /* RecipeRow.swift in Sources */,

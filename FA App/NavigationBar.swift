@@ -22,6 +22,8 @@ struct NavigationBar: View {
                             .foregroundColor(Color.black)
                     } else {
                         Image(systemName: "house")
+                            .resizable()
+                            .frame(width:25,height: 23)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.red)
@@ -45,6 +47,8 @@ struct NavigationBar: View {
                             .foregroundColor(Color.black)
                     } else {
                         Image(systemName: "magnifyingglass")
+                            .resizable()
+                            .frame(width:25,height: 23)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.red)
@@ -67,6 +71,8 @@ struct NavigationBar: View {
                             .foregroundColor(Color.black)
                     } else {
                         Image(systemName: "plus")
+                            .resizable()
+                            .frame(width:25,height: 23)
                             .foregroundColor(.white)
                             .padding()
                             .background(Color.red)
@@ -89,6 +95,8 @@ struct NavigationBar: View {
                         .foregroundColor(Color.black)
                 } else {
                     Image(systemName: "heart")
+                        .resizable()
+                        .frame(width:25,height: 23)
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.red)
@@ -107,9 +115,11 @@ struct NavigationBar: View {
                 VStack{
                 if self.index != 4 {
                     Image(systemName: "person")
-                        .foregroundColor(Color.black)
+                        .foregroundColor(Color.black.opacity(0.2))
                 } else {
                     Image(systemName: "person")
+                    .resizable()
+                        .frame(width:25,height: 23)
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.red)
@@ -118,13 +128,13 @@ struct NavigationBar: View {
                         .padding(.bottom, -20)
                     
                     Text("Profile").foregroundColor(Color.gray)
-                }
+                    }
             }
                 }
         }
-        .padding(.vertical)
+        .padding(.vertical, -5)
         .padding(.horizontal, 25)
-        .background(Color.white)
+        
         .animation(.spring())
     }
 }

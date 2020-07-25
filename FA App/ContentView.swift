@@ -39,7 +39,7 @@ struct ContentView: View {
                     
                 }
                 else if self.index == 1{
-                    Color.black
+                    SearchPanel()
                 }
                 else if self.index == 2{
                     Color.yellow
@@ -55,7 +55,7 @@ struct ContentView: View {
             }
             Spacer()
             NavigationBar(index: self.$index)
-        }.edgesIgnoringSafeArea(.top)
+        }
         
       
         

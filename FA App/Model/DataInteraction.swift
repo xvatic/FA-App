@@ -44,7 +44,7 @@ func uploadComment() {
     request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return}
     
-    request.httpBody = httpBody
+    request.httpBody = ""
     
     let session = URLSession.shared
     session.dataTask(with: request) { (data, response, error) in

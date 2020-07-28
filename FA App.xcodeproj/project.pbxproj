@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D08DD59624CC9D4C00CEE694 /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */; };
+		D08DD59824CF0DEB00CEE694 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D08DD59724CF0DEB00CEE694 /* Podfile */; };
 		D09BF52F24C206D8009195D3 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF52E24C206D8009195D3 /* ArticleView.swift */; };
 		D09BF53124C4BEDB009195D3 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF53024C4BEDB009195D3 /* NavigationBar.swift */; };
 		D0CFAEF424BBB0F7002EE46A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CFAEF324BBB0F7002EE46A /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
+		D08DD59724CF0DEB00CEE694 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		D09BF52E24C206D8009195D3 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		D09BF53024C4BEDB009195D3 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		D0CFAEF024BBB0F7002EE46A /* FA App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FA App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 		D0CFAEE724BBB0F7002EE46A = {
 			isa = PBXGroup;
 			children = (
+				D08DD59724CF0DEB00CEE694 /* Podfile */,
 				D0CFAEF224BBB0F7002EE46A /* FA App */,
 				D0CFAF0924BBB0FC002EE46A /* FA AppTests */,
 				D0CFAF1424BBB0FC002EE46A /* FA AppUITests */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CFAF0024BBB0FC002EE46A /* LaunchScreen.storyboard in Resources */,
+				D08DD59824CF0DEB00CEE694 /* Podfile in Resources */,
 				D0CFAEFD24BBB0FC002EE46A /* Preview Assets.xcassets in Resources */,
 				D0CFAEFA24BBB0FC002EE46A /* Assets.xcassets in Resources */,
 				D0CFAF3124C1015B002EE46A /* recipes.json in Resources */,

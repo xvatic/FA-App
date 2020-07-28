@@ -32,6 +32,7 @@ struct NavigationBar: View {
                             .padding(.bottom, -20)
                         
                         Text("Home").foregroundColor(Color.gray)
+                            .padding(.bottom, 5)
                     }
                     
                 }
@@ -57,6 +58,7 @@ struct NavigationBar: View {
                             .padding(.bottom, -20)
                         
                         Text("Search").foregroundColor(Color.gray)
+                            .padding(.bottom, 5)
                     }
                     
                 }
@@ -81,6 +83,7 @@ struct NavigationBar: View {
                             .padding(.bottom, -20)
                         
                         Text("Add").foregroundColor(Color.gray)
+                            .padding(.bottom, 5)
                     }
                     
                 }
@@ -104,7 +107,10 @@ struct NavigationBar: View {
                         .offset(y: -20)
                         .padding(.bottom, -20)
                     
-                    Text("Liked").foregroundColor(Color.gray)
+                    Text("Liked")
+                        .foregroundColor(Color.gray)
+                        .padding(.bottom, 5)
+                    
                 }
             }
             }
@@ -128,6 +134,7 @@ struct NavigationBar: View {
                         .padding(.bottom, -20)
                     
                     Text("Profile").foregroundColor(Color.gray)
+                        .padding(.bottom, 5)
                     }
             }
                 }

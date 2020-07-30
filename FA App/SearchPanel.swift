@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SearchPanel: View {
-    @State var show = false
-    @State var txt = ""
+    @Binding var show:Bool
+    @Binding var txt:String
     var body: some View {
         VStack (spacing:0){
             HStack {
@@ -56,8 +56,3 @@ struct SearchPanel: View {
     }
 }
 
-struct SearchPanel_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchPanel()
-    }
-}

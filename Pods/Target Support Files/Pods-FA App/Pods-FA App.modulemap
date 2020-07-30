@@ -1,0 +1,6 @@
+framework module Pods_FA_App {
+  umbrella header "Pods-FA App-umbrella.h"
+
+  export *
+  module * { export * }
+}

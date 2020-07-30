@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+
 
 var articles: [Article] = []
 var urlToData: URL {
@@ -16,7 +18,7 @@ var urlToData: URL {
 }
 
 func loadTopRatedArticles() {
-    let url = URL(string: "http://localhost:5000/Recipes?count=5")
+    let url = URL(string: "http://localhost:5000/Recipes/AllRecipes")
     let session = URLSession(configuration: .default)
     let dowloadTask = session.downloadTask(with: url!) { (urlFile, responce, error) in
         if urlFile != nil {
@@ -36,32 +38,19 @@ func loadTopRatedArticles() {
 }
 
 func uploadComment() {
-    let parameters = ["username": "daddy", "comment":"Hello"]
+    let parameters = SearchModel(Filters: [SearchModel.Words(Words: ["Вода"])])
     
-    guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
-    var request = URLRequest(url: url)
-    request.httpMethod = "POST"
-    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    guard let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: []) else { return}
     
-    request.httpBody = ""
-    
-    let session = URLSession.shared
-    session.dataTask(with: request) { (data, response, error) in
-        if let response = response {
-            print(response)
-        }
-        if let data = data {
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-            } catch {
-                print(error)
-            }
-        }
-    }.resume()
-    
+    guard let url = URL(string: "http://localhost:5000/Search/Search") else { return }
+    let request = AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
+        .responseJSON{
+        response in
+           
+            debugPrint(response)
         
+    }
+
+                    
 }
 
 func parseTopRatedArticles() {

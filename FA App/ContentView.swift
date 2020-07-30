@@ -21,6 +21,9 @@ struct ContentView: View {
     }
     
     @State var index = 0
+    @State var show = false
+    @State var txt = ""
+    @State var phrase: Array<Any> = []
     
     var body: some View {
         
@@ -39,7 +42,20 @@ struct ContentView: View {
                     
                 }
                 else if self.index == 1{
-                    SearchPanel()
+                    VStack(spacing:0){
+                        SearchPanel(show: self.$show, txt: self.$txt)
+                        if self.txt != "" {
+                           
+                            
+                            NavigationView{
+                                RecipeColumn(prescriptiontype: "Results", recipes: dummyData)
+                                .navigationBarTitle(Text("RESULT:"))
+                            }
+                        }
+                        
+                    }
+                    
+                    
                 }
                 else if self.index == 2{
                     Color.yellow

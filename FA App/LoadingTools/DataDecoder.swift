@@ -10,6 +10,7 @@ import Foundation
 
 let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"/data.json"
 let recipeData:[Recipe] = load(path)
+let dummyData:[Recipe] = load("recipes.json")
 
 
 func load<T:Decodable>(_ filename:String, as type:T.Type = T.self)->T {

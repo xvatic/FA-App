@@ -76,6 +76,9 @@ struct ContentView: View {
       
         
     }
+    func SearchData(phrase:String){
+        return
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

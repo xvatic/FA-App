@@ -37,17 +37,24 @@ func loadTopRatedArticles() {
     
 }
 
-func uploadComment() {
+func uploadComment(phrase : String) {
+   
     let parameters = SearchModel(Filters: [SearchModel.Words(Words: ["Вода"])])
     
-    
+    let decoder = JSONDecoder()
     guard let url = URL(string: "http://localhost:5000/Search/Search") else { return }
     let request = AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
-        .responseJSON{
-        response in
-           
-            debugPrint(response)
-        
+        .response{
+        (responseData) in
+            guard let data = responseData.data else {return}
+            do {
+                let json = try decoder.decode([Recipe].self, from: data)
+                print(json)
+            } catch {
+                print(error)
+            }
+            
+                    
     }
 
                     

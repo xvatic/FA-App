@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         loadTopRatedArticles()
         sleep(4)
-        uploadComment()
+        uploadComment(phrase: "Вкусно")
         let contentView = ContentView(url: recipeData[0].imageName)
 
         // Use a UIHostingController as window root view controller.

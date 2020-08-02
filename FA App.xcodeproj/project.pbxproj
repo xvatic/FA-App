@@ -183,7 +183,6 @@
 				D09BF53024C4BEDB009195D3 /* NavigationBar.swift */,
 				D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */,
 				D08DD59924D066ED00CEE694 /* RecipeColumn.swift */,
-				D0A5B09A24D32E7B001E1300 /* SearchModel.swift */,
 			);
 			path = "FA App";
 			sourceTree = "<group>";
@@ -217,6 +216,7 @@
 		D0CFAF2524BBB342002EE46A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D0A5B09A24D32E7B001E1300 /* SearchModel.swift */,
 				D0CFAF2624BBB3B3002EE46A /* DataModel.swift */,
 				D0CFAF2824BBB45E002EE46A /* DataInteraction.swift */,
 				D0CFAF2A24C0EECB002EE46A /* Recipe.swift */,

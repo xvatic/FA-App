@@ -22,7 +22,10 @@ struct SearchPanel: View {
                 HStack {
                     if self.show{
                         Image(systemName:"magnifyingglass")
-                        TextField("Search by", text: self.$txt)
+                        TextField("Search by", text: self.$txt, onEditingChanged: { (changed) in
+                            
+                            
+                        })
                         Button(action: {
                             withAnimation{
                                 self.show.toggle()

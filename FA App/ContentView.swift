@@ -44,14 +44,6 @@ struct ContentView: View {
                 else if self.index == 1{
                     VStack(spacing:0){
                         SearchPanel(show: self.$show, txt: self.$txt)
-                        if self.txt != "" {
-                           
-                            
-                            NavigationView{
-                                RecipeColumn(prescriptiontype: "Results", recipes: dummyData)
-                                .navigationBarTitle(Text("RESULT:"))
-                            }
-                        }
                         
                     }
                     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A603B552537C39AD5002F2D /* Pods_FA_App_FA_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224A456A38BD027FD44457A8 /* Pods_FA_App_FA_AppUITests.framework */; };
 		51C38921E9642FAD8EAD079E /* Pods_FA_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DFB11E45A88DC3A209E7227 /* Pods_FA_App.framework */; };
+		D027B73924FFB68D006E30F9 /* RegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D027B73824FFB68D006E30F9 /* RegistrationForm.swift */; };
 		D08DD59624CC9D4C00CEE694 /* SearchPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */; };
 		D08DD59A24D066ED00CEE694 /* RecipeColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DD59924D066ED00CEE694 /* RecipeColumn.swift */; };
 		D09BF52F24C206D8009195D3 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09BF52E24C206D8009195D3 /* ArticleView.swift */; };
@@ -60,6 +61,7 @@
 		8F97EF1A4F017B17983F7A79 /* Pods-FA App-FA AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FA App-FA AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FA App-FA AppUITests/Pods-FA App-FA AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		93B243C7B97DB46BE43A078F /* Pods-FA AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FA AppTests.debug.xcconfig"; path = "Target Support Files/Pods-FA AppTests/Pods-FA AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9DFB11E45A88DC3A209E7227 /* Pods_FA_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FA_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D027B73824FFB68D006E30F9 /* RegistrationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationForm.swift; sourceTree = "<group>"; };
 		D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanel.swift; sourceTree = "<group>"; };
 		D08DD59924D066ED00CEE694 /* RecipeColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeColumn.swift; sourceTree = "<group>"; };
 		D09BF52E24C206D8009195D3 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				D09BF53024C4BEDB009195D3 /* NavigationBar.swift */,
 				D08DD59524CC9D4C00CEE694 /* SearchPanel.swift */,
 				D08DD59924D066ED00CEE694 /* RecipeColumn.swift */,
+				D027B73824FFB68D006E30F9 /* RegistrationForm.swift */,
 			);
 			path = "FA App";
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				D08DD59A24D066ED00CEE694 /* RecipeColumn.swift in Sources */,
 				D0CFAF3324C10D70002EE46A /* RecipeRow.swift in Sources */,
 				D0CFAF2924BBB45E002EE46A /* DataInteraction.swift in Sources */,
+				D027B73924FFB68D006E30F9 /* RegistrationForm.swift in Sources */,
 				D09BF53124C4BEDB009195D3 /* NavigationBar.swift in Sources */,
 				D0CFAF3724C11A26002EE46A /* Loader.swift in Sources */,
 				D0CFAF3A24C1B9B7002EE46A /* AsyncImage.swift in Sources */,

@@ -17,6 +17,7 @@ var urlToData: URL {
     return urlPath
 }
 
+
 func loadTopRatedArticles() {
     let url = URL(string: "http://localhost:5000/Recipes/AllRecipes")
     let session = URLSession(configuration: .default)
@@ -26,10 +27,6 @@ func loadTopRatedArticles() {
             try? FileManager.default.removeItem(at: urlToData)
             
             try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
-            print(urlToData)
-            
-            
-            
         }
     }
     
@@ -37,30 +34,27 @@ func loadTopRatedArticles() {
     
 }
 
-func uploadComment (phrase : String) {
+func uploadComment (phrase : String) ->  [Recipe]{
     let parameters = SearchModel(Filters: [SearchModel.Words(Words: ["Вода"])])
-    
-    
     let decoder = JSONDecoder()
-    guard let url = URL(string: "http://localhost:5000/Search/Search") else { return()}
+    var searchResult:[Recipe] = dummyData
+    guard let url = URL(string: "http://localhost:5000/Search/Search") else { return(searchResult)}
     let request = AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
         .responseJSON{
             (responseData)   in
             guard let data = responseData.data else {return}
             do {
-                let json = try decoder.decode([Recipe].self, from: data)
-                    
+                debugPrint(data)
+                searchResult = try decoder.decode([Recipe].self, from: data)
             } catch {
                 print(error)
             }
     }
     
-    
+   return(searchResult)
 }
 
 func parseTopRatedArticles() {
-    
-    
     let data = try? Data(contentsOf: urlToData)
     if data == nil {
         return

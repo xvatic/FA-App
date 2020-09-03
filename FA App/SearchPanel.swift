@@ -34,6 +34,10 @@ struct SearchPanel: View {
                         }) {
                             Image(systemName: "xmark").foregroundColor(.black)
                         }
+                        if self.txt != "" {
+                            RecipeColumn(prescriptiontype: "result", recipes: uploadComment(phrase: self.txt))
+                        }
+                        
                     }
                     else {
                         Button(action:{
@@ -48,14 +52,17 @@ struct SearchPanel: View {
                 }.padding(self.show ? 10: 0)
                 .background(Color.white)
                 .cornerRadius(20)
-                
+            
             }
             .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top)! + 15)
             .padding(.horizontal)
             .padding(.bottom, 10)
             .background(Color.red)
+            Spacer()
+            
         }
         .edgesIgnoringSafeArea(.top)
+        
     }
 }
 

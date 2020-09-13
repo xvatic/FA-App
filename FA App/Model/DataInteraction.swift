@@ -9,6 +9,11 @@
 import Foundation
 import Alamofire
 
+let app_id = ""
+let rest_key = ""
+let base_url = ""
+let register_url = "\(base_url)\register"
+
 
 var articles: [Article] = []
 var urlToData: URL {

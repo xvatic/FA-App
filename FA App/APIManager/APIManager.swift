@@ -9,8 +9,9 @@
 import Foundation
 import Alamofire
 
-class APIManager {
+class APIManager : ObservableObject{
     static let shareInstance = APIManager()
+    @Published var searchResult:[Recipe] = []
     
     func callingRegisterAPI(register:RegisterModel) {
         let headers: HTTPHeaders = [
@@ -33,6 +34,8 @@ class APIManager {
         }
         
     }
+    
+    
     
     
 }

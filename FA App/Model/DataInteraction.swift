@@ -24,7 +24,7 @@ var urlToData: URL {
 
 
 func loadTopRatedArticles() {
-    let url = URL(string: "http://localhost:5000/Recipes/AllRecipes")
+    let url = URL(string: "http://25.41.79.10:80/Recipes/AllRecipes")
     let session = URLSession(configuration: .default)
     let dowloadTask = session.downloadTask(with: url!) { (urlFile, responce, error) in
         if urlFile != nil {
@@ -43,7 +43,7 @@ func uploadComment (phrase : String) ->  [Recipe]{
     let parameters = SearchModel(Filters: [SearchModel.Words(Words: ["Вода"])])
     let decoder = JSONDecoder()
     var searchResult:[Recipe] = dummyData
-    guard let url = URL(string: "http://localhost:5000/Search/Search") else { return(searchResult)}
+    guard let url = URL(string: "http://25.41.79.10:80/Search/Search") else { return(searchResult)}
     let request = AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
         .responseJSON{
             (responseData)   in

@@ -25,6 +25,7 @@ struct ContentView: View {
     @State var txt = ""
     @State var phrase: Array<Any> = []
     
+    
     var body: some View {
         
         VStack {
@@ -55,7 +56,7 @@ struct ContentView: View {
                     Color.blue
                 }
                 else{
-                    Color.orange
+                    RegistrationForm()
                 }
                 
                 

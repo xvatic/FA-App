@@ -27,7 +27,7 @@ struct RegistrationForm: View {
                          Text("Register now").font(.title)
                     }
                 }.padding(.top)
-                    .padding()
+                    .padding(.bottom)
                 VStack(alignment: .leading){
                     Text("Username")
                         .font(.title)
@@ -73,10 +73,15 @@ struct RegistrationForm: View {
                         Spacer()
                         
                         Button(action: {
-                            self.registered = false
+                            self.registered.toggle()
                             
                         }) {
-                            Text("Haven't registered yet?")
+                            if self.registered {
+                                Text("Haven't registered yet?")
+                            }
+                            else {
+                                Text("Already have an account?")
+                            }
                         }
                         
                     }.padding(.top)
@@ -89,7 +94,7 @@ struct RegistrationForm: View {
                 .padding(.horizontal)
                 .background(Color.white)
                 .overlay(Rectangle().stroke(Color.black.opacity(0.03), lineWidth: 2).shadow(radius: 4))
-                Spacer()
+                
                 
                 HStack{
                     Button(action: {
@@ -99,11 +104,11 @@ struct RegistrationForm: View {
                         HStack(spacing:10) {
                             ZStack{
                                 Circle()
-                                    .stroke(LinearGradient(gradient: .init(colors: [Color.green, Color.blue]), startPoint: .top, endPoint: .bottom), lineWidth:2)
+                                    .stroke(Color.red, lineWidth:2)
                                     .frame(width:20, height: 20)
                                 if self.rem {
                                     Circle()
-                                        .fill(Color.blue)
+                                        .fill(Color.red)
                                         .frame(width: 10, height: 10)
                                 }
                             }
@@ -115,7 +120,35 @@ struct RegistrationForm: View {
                             .foregroundColor(Color.black.opacity(0.7))
                         
                     }
-                }
+                    Spacer()
+                    Button(action: {
+                        
+                    }) {
+                        if self.registered{
+                            Text("Sign In")
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .padding(.vertical)
+                            .padding(.horizontal, 35)
+                            .background(Color.red)
+                            .cornerRadius(5)
+                        } else
+                        {
+                            Text("Register")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.vertical)
+                                .padding(.horizontal, 35)
+                                .background(Color.red)
+                                .cornerRadius(5)
+                            
+                        }
+                        
+                    }
+                    
+                    
+                }.padding()
+                Spacer()
             }
         }
     }

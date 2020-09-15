@@ -34,9 +34,6 @@ struct SearchPanel: View {
                         }) {
                             Image(systemName: "xmark").foregroundColor(.black)
                         }
-                        if self.txt != "" {
-                            RecipeColumn(prescriptiontype: "result", recipes: uploadComment(phrase: self.txt))
-                        }
                         
                     }
                     else {

@@ -16,6 +16,7 @@ struct RegistrationForm: View {
     @State var username = ""
     @State var registered = true
     @State var rem = false
+    @State var showAlert = false
     var body: some View {
        
         ZStack{
@@ -129,9 +130,11 @@ struct RegistrationForm: View {
                                 switch result {
                                 case .success(let json):
                                     print(json as AnyObject)
+                                    self.showAlert.toggle()
                     
                                 case .failure(let err):
                                     print(err.localizedDescription)
+                                    self.showAlert.toggle()
                                 }
                             }
                             
@@ -166,8 +169,11 @@ struct RegistrationForm: View {
                     
                     
                 }.padding()
+                    
                 Spacer()
             }
+        }.alert(isPresented: $showAlert) {
+            Alert(title: Text("Success"))
         }
     }
 }

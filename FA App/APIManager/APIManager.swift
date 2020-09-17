@@ -39,6 +39,24 @@ class APIManager : ObservableObject{
         
     }
     
+    func  callingLoginAPI(login: LoginModel, completionHandler: Handler) {
+        AF.request(login_url, method: .post, parameters: login, encoder: JSONParameterEncoder.default).response { response in
+            debugPrint(response)
+            switch response.result {
+            case .success(let data):
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                    print(json)
+                }catch{
+                    print(error.localizedDescription)
+                }
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+            
+        }
+    }
+    
     
     
     

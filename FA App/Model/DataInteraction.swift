@@ -13,6 +13,7 @@ let app_id = ""
 let rest_key = ""
 let base_url = ""
 let register_url = "http://25.41.79.10/user/register"
+let login_url = "http://25.41.79.10/user/login"
 
 
 var articles: [Article] = []

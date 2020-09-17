@@ -9,15 +9,19 @@
 import Foundation
 import Alamofire
 
+enum APIErrors : Error {
+    case custom(message : String)
+}
+
+typealias Handler = (Swift.Result<Any?, APIErrors>)-> Void
+
 class APIManager : ObservableObject{
     static let shareInstance = APIManager()
-    @Published var searchResult:[Recipe] = []
+
     
-    func callingRegisterAPI(register:RegisterModel) {
-        let headers: HTTPHeaders = [
-        .contentType("application/json")
-        ]
-        AF.request(register_url, method: .post, parameters: register, encoder: JSONParameterEncoder.default, headers: headers).response { response in
+    func callingRegisterAPI(register:RegisterModel, completionHandler: Handler) {
+        
+        AF.request(register_url, method: .post, parameters: register, encoder: JSONParameterEncoder.default).response { response in
             debugPrint(response)
             switch response.result {
             case .success(let data):

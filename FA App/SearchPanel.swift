@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchPanel: View {
     @Binding var show:Bool
     @Binding var txt:String
+    @ObservedObject var  searchManager = SearchAPIManager()
     var body: some View {
         VStack (spacing:0){
             HStack {
@@ -22,7 +23,7 @@ struct SearchPanel: View {
                 HStack {
                     if self.show{
                         Image(systemName:"magnifyingglass")
-                        TextField("Search by", text: self.$txt, onEditingChanged: { (changed) in
+                        TextField("Search by", text: self.$txt, onEditingChanged: { (changed) in 
                             
                             
                         })

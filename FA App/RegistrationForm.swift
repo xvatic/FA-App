@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CryptoKit
 
 struct RegistrationForm: View {
     
@@ -122,6 +123,23 @@ struct RegistrationForm: View {
                     }
                     Spacer()
                     Button(action: {
+                        if self.registered{
+                            APIManager.shareInstance.callingRegisterAPI(register: RegisterModel(UserName: self.username, PasswordHash: toHash(input: self.password), Email: self.email)) {
+                                (result) in
+                                switch result {
+                                case .success(let json):
+                                    print(json as AnyObject)
+                    
+                                case .failure(let err):
+                                    print(err.localizedDescription)
+                                }
+                            }
+                            
+                        } else
+                        {
+                        
+                            
+                        }
                         
                     }) {
                         if self.registered{

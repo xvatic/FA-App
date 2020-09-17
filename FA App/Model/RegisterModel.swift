@@ -9,7 +9,7 @@
 import Foundation
 
 struct RegisterModel:Encodable{
-    let email:String
-    let password: String
-    let name: String
+    let UserName:String
+    let PasswordHash: String
+    let Email: String
 }

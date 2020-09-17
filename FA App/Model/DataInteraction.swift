@@ -12,7 +12,7 @@ import Alamofire
 let app_id = ""
 let rest_key = ""
 let base_url = ""
-let register_url = "\(base_url)\register"
+let register_url = "http://25.41.79.10/user/register"
 
 
 var articles: [Article] = []

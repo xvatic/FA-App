@@ -24,6 +24,7 @@ struct ContentView: View {
     @State var show = false
     @State var txt = ""
     @State var phrase: Array<Any> = []
+    @State var logged = true
     
     
     var body: some View {
@@ -56,7 +57,13 @@ struct ContentView: View {
                     Color.blue
                 }
                 else{
-                    RegistrationForm()
+                    if self.logged {
+                        ProfileView()
+                        
+                    } else {
+                        RegistrationForm(logged: self.$logged)
+                    }
+                    
                 }
                 
                 

@@ -17,6 +17,7 @@ struct RegistrationForm: View {
     @State var registered = true
     @State var rem = false
     @State var showAlert = false
+    @Binding var logged: Bool
     var body: some View {
        
         ZStack{
@@ -125,22 +126,22 @@ struct RegistrationForm: View {
                     Spacer()
                     Button(action: {
                         if self.registered{
-                            APIManager.shareInstance.callingRegisterAPI(register: RegisterModel(UserName: self.username, PasswordHash: toHash(input: self.password), Email: self.email)) {
-                                (result) in
-                                switch result {
-                                case .success(let json):
-                                    print(json as AnyObject)
-                                    self.showAlert.toggle()
-                    
-                                case .failure(let err):
-                                    print(err.localizedDescription)
-                                    self.showAlert.toggle()
-                                }
-                            }
+                            
                             
                         } else
                         {
-                        
+                            APIManager.shareInstance.callingRegisterAPI(register: RegisterModel(UserName: self.username, PasswordHash: toHash(input: self.password), Email: self.email)) {
+                                        (result) in
+                                        switch result {
+                                        case .success(let json):
+                                            print(json as AnyObject)
+                                            self.showAlert.toggle()
+                            
+                                        case .failure(let err):
+                                            print(err.localizedDescription)
+                                            self.showAlert.toggle()
+                                        }
+                                    }
                             
                         }
                         
@@ -178,8 +179,4 @@ struct RegistrationForm: View {
     }
 }
 
-struct RegistrationForm_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationForm()
-    }
-}
+
